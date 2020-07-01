@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/")
 class NewClass {
-        @Value("${MYSQL_HOST}")
-        private String myVariable;
     
 	@GetMapping
         @ResponseBody
