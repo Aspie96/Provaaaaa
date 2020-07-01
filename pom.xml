@@ -41,10 +41,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-	 <dependency>
-	  <groupId>mysql</groupId>
-	  <artifactId>mysql-connector-java</artifactId>
-	 </dependency>
         <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-devtools</artifactId>
@@ -63,41 +59,16 @@
 
 	<build>
 		<plugins>
-			<plugin>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-maven-plugin</artifactId>
-  <executions>
-    <execution>
-      <goals>
-        <goal>repackage</goal>
-      </goals>
+			<plugins>
+      <plugin>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>3.0.2</version>
+      </plugin>
       <configuration>
-        <classifier>spring-boot</classifier>
-        <mainClass>${fully.qualified.main.class}</mainClass>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
-                        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals><goal>copy</goal></goals>
-                    <configuration>
-                        <artifactItems>
-                            <artifactItem>
-                                <groupId>com.heroku</groupId>
-                                <artifactId>webapp-runner</artifactId>
-                                <version>9.0.30.0</version>
-                                <destFileName>webapp-runner.jar</destFileName>
-                            </artifactItem>
-                        </artifactItems>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+  <appName>sushi</appName>
+</configuration>
+    </plugins>
 		</plugins>
 	</build>
 </project>
