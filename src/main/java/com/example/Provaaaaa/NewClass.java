@@ -5,6 +5,8 @@
  */
 package com.example.Provaaaaa;
 
+import java.util.Enumeration;
+import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -21,6 +23,13 @@ class NewClass {
 	@GetMapping
         @ResponseBody
 	public String home() {
-		return "newhtml" + myVariable;
+		Properties p = System.getProperties();
+Enumeration keys = p.keys();
+while (keys.hasMoreElements()) {
+    String key = (String)keys.nextElement();
+    String value = (String)p.get(key);
+    System.out.println(key + ": " + value);
+}
+return "newhtml";
 	}
 }
