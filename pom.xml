@@ -59,16 +59,14 @@
 
 	<build>
 		<plugins>
-			<plugins>
       <plugin>
         <groupId>com.heroku.sdk</groupId>
         <artifactId>heroku-maven-plugin</artifactId>
         <version>3.0.2</version>
-      </plugin>
-      <configuration>
-  <appName>sushi</appName>
+            <configuration>
+  <appName>juviner</appName>
 </configuration>
-    </plugins>
+      </plugin>
 		</plugins>
 	</build>
 </project>
