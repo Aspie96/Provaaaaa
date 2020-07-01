@@ -85,7 +85,7 @@
 						<artifactId>maven-war-plugin</artifactId>
 						<version>3.3.0</version>
 						<configuration>
-							<outputDirectory>webapps</outputDirectory>
+							<outputDirectory>target</outputDirectory>
 							<warName>ROOT</warName>
 						</configuration>
 					</plugin>
