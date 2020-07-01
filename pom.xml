@@ -58,6 +58,11 @@
 	  <groupId>javax.servlet</groupId>
 	  <artifactId>javax.servlet-api</artifactId>
 	 </dependency>
+	 <dependency>
+	  <groupId>com.heroku.sdk</groupId>
+	  <artifactId>heroku-maven-plugin</artifactId>
+          <version>3.0.2</version>
+	 </dependency>
 	</dependencies>
 
 	<build>
