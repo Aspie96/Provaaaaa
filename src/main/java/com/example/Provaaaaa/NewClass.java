@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/")
 class NewClass {
-        @Autowired
-                UserDao userDao;
+        /*@Autowired
+                UserDao userDao;*/
     
 	@GetMapping
         @ResponseBody
 	public String home() {
-		return "newhtml" + userDao.count() + "f";
+		return "newhtml";// + userDao.count() + "f";
 	}
 }
