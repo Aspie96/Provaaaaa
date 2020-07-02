@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/")
 class NewClass {
-        /*@Autowired
-                UserDao userDao;*/
+        @Autowired
+                UserDao userDao;
     
 	@GetMapping
         @ResponseBody
