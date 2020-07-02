@@ -20,6 +20,6 @@ class NewClass {
 	@GetMapping
         @ResponseBody
 	public String home() {
-		return "newhtml";// + userDao.count() + "f";
+		return "newhtml" + userDao.count() + "f";
 	}
 }
